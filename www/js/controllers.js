@@ -11,14 +11,14 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
   
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+  $scope.operators = Chats.all();
+  $scope.remove = function(opr) {
+    Chats.remove(opr);
   }
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+  $scope.opr = Chats.get($stateParams.chatId);
 })
 
 .controller('AccountCtrl', function($scope) {
