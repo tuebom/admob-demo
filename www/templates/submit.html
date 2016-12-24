@@ -1,0 +1,29 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Input Nomor HP Tujuan</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeTrx()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doProsesTrx()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Nomor Pelanggan</span>
+          <input type="number" ng-model="trxData.nopel">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Nomor HP</span>
+          <input type="number" ng-model="trxData.tujuan">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">PIN</span>
+          <input type="password" ng-model="trxData.pin">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Proses</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

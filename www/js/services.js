@@ -40,6 +40,229 @@ angular.module('starter.services', [])
     logo: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAD4UlEQVR42u2Ye0hTURzHz+4qm4Uz19uBVmiY1iyLyqjoj+ovoyythRk9RHsX9KKi0iDMIsgoMIgitNAMysiKMBHKnhBpf0hYWSKhMvZw6tZ277efc2ze3NqCWxrcC1/OuWfn8eF3fr/fOXcM/8nDZFAZVAaVQf9jUKcz0t01gB6QRpLGk9SkNBbUOLP1kDSgPxyxQS3Ij1NQwTwSOhVBjTN1nPyHoJ+UVHhBBaoLYIMLtAeIz+fckL2wwjhlcO7yT0HNZL1YTmRN/jY3sKBOZwjMFg0cDpV3sVom2nasDuDLvApWa5j0oMAkV9fCwlNISmqAVmtCQvwnVFXp8d06A8ZHkaJt/zw9ATtyS3H5Ui4ePtyIhoaFMBqnoblZh8rKTCTqGhEV9R1ZW+/AbguBtfuoNKAGw1yPscLVVkRHfYVGY/a0fWTJItA+ge9TERMtiNS2uupjx36mFXKkAW1tW+CatKwsB2bTBNcwu02DvPyLWJv+qs+295bnn5zDy5dLcffeDpy/kI/sPeVI2fIa+oNVKLhWgK760YAQijdvlyEj4w7Nt1saULsjHna72rfPPRGbS9D6iPYmUgkpixRJyvk14Z+QBpTnp7i61j5Pwa5dV6HXl2LTllIYu6h9SR9QJUX/4SEQtlJ9HUEvo/dpFP2cN9B4pkT2hnKkkyWvX9/vmtciFegPRxz27S3p52uzWJMfR1T4ddBuNlzUtGjRc1phuzSg7e3JnoknT7FgVeorjJkKFLCzv42aarYJXUwtgn/MMhAWQxux5IurmVOYaIVsaUCtnYlo+jKnv+8p3AAK2uIkDvwBJYQKpffo/EYK6XNaTeT8XEqOS3V7ivEdSAtJZ0jv/ST3+7+4wr6/fDIJ7oR/pSgPOl0LVKFAXKwRVXVr0NiuQ5spllJYDBobZ6K+fg6Kiw9gz9FbeLd+ucgVPj6bjcc16YiPb6f8KSArqwJGQxg6bUekATVbZtGJ9MGzpkYjeOpDhwKjwm0ID+/GsGFiN73LtnlezrE8MJX3N5W7nqh7I10wtVHCD6WJb93cSW8jPFt27EgRUlJqMH9eHRYkv8fKldXIzKxESfFe1Dakoys6otc31SOwOfUeVqTVIPdkIY0d4hpfV7cY+nXl0iV8my0Bzd/i/F80hOFUhvRvH+M+BNJ6LtB+LtEC5dFOiYLJ4S+YAokpe/f3oGIQ3fB9gnJkMLJoCzfYQenI3MYF/CQZUFABZMXoHsjAH3gDCsq3EOyN4L6bJAN1OrV/vu0Vwfc1WyVK+AZzEYwdp0lnglM36cVZGG35AfuaOnLRangq//ckg8qgMqgM+pefn+yTQTosejWgAAAAAElFTkSuQmCC'
   }];
 
+  var grup = [{
+    id: 0, // AXIS
+		items: [{
+			id: 0,
+			kode: 'XR5H',
+			info: 'Axis 5 ribu'
+		}, {
+			id: 1,
+			kode: 'XR10H',
+			info: 'Axis 10 ribu'
+		},{
+			id: 2,
+			kode: 'XR15H',
+			info: 'Axis 15 ribu'
+		}, {
+			id: 3,
+			kode: 'XR25H',
+			info: 'Axis 25 ribu'
+		}, {
+			id: 4,
+			kode: 'XR30H',
+			info: 'Axis 30 ribu'
+		}, {
+			id: 5,
+			kode: 'XR50H',
+			info: 'Axis 50 ribu'
+		}, {
+			id: 6,
+			kode: 'XR100H',
+			info: 'Axis 100 ribu'
+		}, {
+			id: 7,
+			kode: 'BRO10',
+			info: 'Bronet Kuota 1GB 30 Hari'
+		}, {
+			id: 8,
+			kode: 'BRO20',
+			info: 'Bronet Kuota 2GB 60 Hari'
+		}, {
+			id: 9,
+			kode: 'BRO35',
+			info: 'Bronet Kuota 3GB 60 Hari'
+		}]
+  }, {
+    id: 1, // INDOSAT
+		items: [{
+			id: 0,
+			kode: 'I5H',
+			info: 'Indosat 5 ribu'
+		}, {
+			id: 1,
+			kode: 'I10H',
+			info: 'Indosat 10 ribu'
+		},{
+			id: 2,
+			kode: 'I20H',
+			info: 'Indosat 20 ribu'
+		}, {
+			id: 3,
+			kode: 'I25H',
+			info: 'Indosat 25 ribu'
+		}, {
+			id: 4,
+			kode: 'I30H',
+			info: 'Indosat 30 ribu'
+		}, {
+			id: 5,
+			kode: 'I50H',
+			info: 'Indosat 50 ribu'
+		}, {
+			id: 6,
+			kode: 'I100H',
+			info: 'Indosat 100 ribu'
+		}]
+  },{
+    id: 2, // TELKOMSEL
+		items: [{
+			id: 0,
+			kode: 'S5H',
+			info: 'Telkomsel 5 ribu'
+		}, {
+			id: 1,
+			kode: 'S10H',
+			info: 'Telkomsel 10 ribu'
+		},{
+			id: 2,
+			kode: 'S20H',
+			info: 'Telkomsel 20 ribu'
+		}, {
+			id: 3,
+			kode: 'S25H',
+			info: 'Telkomsel 25 ribu'
+		}, {
+			id: 4,
+			kode: 'S50H',
+			info: 'Telkomsel 50 ribu'
+		}, {
+			id: 5,
+			kode: 'S100H',
+			info: 'Telkomsel 100 ribu'
+		}]
+  }, {
+    id: 3, // THREE
+		items: [{
+			id: 0,
+			kode: 'T5H',
+			info: 'Three 5 ribu'
+		}, {
+			id: 1,
+			kode: 'T10H',
+			info: 'Three 10 ribu'
+		},{
+			id: 2,
+			kode: 'T15H',
+			info: 'Three 15 ribu'
+		}, {
+			id: 3,
+			kode: 'T25H',
+			info: 'Three 25 ribu'
+		}, {
+			id: 4,
+			kode: 'T30H',
+			info: 'Three 30 ribu'
+		}, {
+			id: 5,
+			kode: 'T50H',
+			info: 'Three 50 ribu'
+		}, {
+			id: 6,
+			kode: 'T100H',
+			info: 'Three 100 ribu'
+		}]
+  }, {
+    id: 4,
+		items: [{
+			id: 0,
+			kode: 'XR5H',
+			info: 'XL 5 ribu'
+		}, {
+			id: 1,
+			kode: 'XR10H',
+			info: 'XL 10 ribu'
+		},{
+			id: 2,
+			kode: 'XR15H',
+			info: 'XL 15 ribu'
+		}, {
+			id: 3,
+			kode: 'XR25H',
+			info: 'XL 25 ribu'
+		}, {
+			id: 4,
+			kode: 'XR30H',
+			info: 'XL 30 ribu'
+		}, {
+			id: 5,
+			kode: 'XR50H',
+			info: 'XL 50 ribu'
+		}, {
+			id: 6,
+			kode: 'XR100H',
+			info: 'XL 100 ribu'
+		}]
+  }, {
+    id: 5, // SMARTFREN
+		items: [{
+			id: 0,
+			kode: 'SMN5H',
+			info: 'Axis 5 ribu'
+		}, {
+			id: 1,
+			kode: 'SMN10H',
+			info: 'Smartfren 10 ribu'
+		},{
+			id: 2,
+			kode: 'SMN20H',
+			info: 'Smartfren 20 ribu'
+		}, {
+			id: 3,
+			kode: 'SMN25H',
+			info: 'Smartfren 25 ribu'
+		}, {
+			id: 4,
+			kode: 'SMN30H',
+			info: 'Smartfren 30 ribu'
+		}, {
+			id: 5,
+			kode: 'SMN50H',
+			info: 'Smartfren 50 ribu'
+		}, {
+			id: 6,
+			kode: 'SMN60H',
+			info: 'Smartfren 60 ribu'
+		}, {
+			id: 7,
+			kode: 'SMN100H',
+			info: 'Smartfren 100 ribu'
+		}]
+  }, {
+    id: 6, //PLN
+		items: [{
+			id: 0,
+			kode: 'PLN20H',
+			info: 'PLN 20 ribu'
+		}, {
+			id: 1,
+			kode: 'PLN50H',
+			info: 'PLN 50 ribu'
+		},{
+			id: 2,
+			kode: 'PLN100H',
+			info: 'PLN 100 ribu'
+		}, {
+			id: 3,
+			kode: 'PLN200H',
+			info: 'PLN 200 ribu'
+		}, {
+			id: 4,
+			kode: 'PLN500H',
+			info: 'PLN 500 ribu'
+		}]
+  }];
+
 
   return {
     all: function() {
@@ -49,9 +272,9 @@ angular.module('starter.services', [])
       operators.splice(operators.indexOf(opr), 1);
     },
     get: function(oprId) {
-      for (var i = 0; i < operators.length; i++) {
-        if (operators[i].id === parseInt(oprId)) {
-          return operators[i];
+      for (var i = 0; i < grup.length; i++) {
+        if (grup[i].id === parseInt(oprId)) {
+          return { name: operators[i].name, logo: operators[i].logo, items: grup[i].items };
         }
       }
       return null;

@@ -1,1 +1,6 @@
 /* Empty. Add your own CSS if you like */
+.item-input input {
+	font-weight: bold;
+	font-size: 18px;
+	padding-left: 12px;
+}

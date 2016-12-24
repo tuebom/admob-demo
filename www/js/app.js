@@ -1,9 +1,5 @@
 // Ionic Starter App
 
-$(function() {
-  FastClick.attach(document.body);
-});
-
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
@@ -53,30 +49,30 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   .state('tab.chats', {
-      url: '/chats',
+      url: '/services',
       views: {
-        'tab-chats': {
+        'tab-services': {
           templateUrl: 'templates/tab-chats.html',
           controller: 'ChatsCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.svc-detail', {
+      url: '/services/:svcId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-services': {
+          templateUrl: 'templates/svc-detail.html',
+          controller: 'SvcDetailCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.tool', {
+    url: '/tool',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-tool': {
+        templateUrl: 'templates/tab-tool.html',
+        controller: 'ToolCtrl'
       }
     }
   });
