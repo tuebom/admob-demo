@@ -1,6 +1,23 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('DashCtrl', function($scope) { //, $ionicPush, $ionicPlatform
+	
+	/*$ionicPlatform.ready(function() {
+		
+		$ionicPush.init({
+			"debug": true,
+			"onNotification": function(notification) {
+				var payload = notification.payload;
+				console.log(notification, payload);
+			},
+			"onRegister": function(data) {
+				console.log(data.token);
+			}
+		});
+
+		$ionicPush.register();
+	});*/
+
 	/*$scope.options = {
 		loop: false,
 		effect: 'fade',
@@ -74,8 +91,134 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('ToolCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
+.controller('ToolCtrl', function($scope, $ionicModal, $timeout) {
+
+  // Form data for the submit modal
+  $scope.trxData = {};
+
+  // Pendaftaran member
+  $ionicModal.fromTemplateUrl('templates/daftar.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.mdlDF = modal;
+  });
+
+  $scope.daftarMember = function() {
+    $scope.mdlDF.show();
+  };
+
+  $scope.closeDF = function() {
+    $scope.mdlDF.hide();
+  };
+
+  $scope.doRegister = function() {
+    console.log('Doing login', $scope.trxData);
+
+    // Simulate a login delay. Remove this and replace with your login
+    // code if using a login system
+    $timeout(function() {
+      $scope.closeDF();
+    }, 1000);
+  };
+
+	// Transfer saldo
+  $ionicModal.fromTemplateUrl('templates/tsaldo.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.mdlTS = modal;
+  });
+
+  $scope.transferSaldo = function() {
+    $scope.mdlTS.show();
+  };
+
+  $scope.closeTS = function() {
+    $scope.mdlTS.hide();
+  };
+
+  $scope.doTransferSld = function() {
+    console.log('Doing login', $scope.trxData);
+
+    // Simulate a login delay. Remove this and replace with your login
+    // code if using a login system
+    $timeout(function() {
+      $scope.closeTS();
+    }, 1000);
+  };
+
+	// Transfer bonus
+  $ionicModal.fromTemplateUrl('templates/tbonus.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.mdlTB = modal;
+  });
+
+  $scope.transferBonus = function() {
+    $scope.mdlTB.show();
+  };
+
+  $scope.closeTB = function() {
+    $scope.mdlTB.hide();
+  };
+
+  $scope.doTransferBns = function() {
+    console.log('Doing login', $scope.trxData);
+
+    // Simulate a login delay. Remove this and replace with your login
+    // code if using a login system
+    $timeout(function() {
+      $scope.closeTB();
+    }, 1000);
+  };
+
+	// Ganti PIN
+  $ionicModal.fromTemplateUrl('templates/gantipin.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.mdlGP = modal;
+  });
+
+  $scope.gantiPIN = function() {
+    $scope.mdlGP.show();
+  };
+
+  $scope.closeGP = function() {
+    console.log('Close GP');
+    $scope.mdlGP.hide();
+  };
+
+  $scope.doGantiPIN = function() {
+    console.log('Doing login', $scope.trxData);
+
+    // Simulate a login delay. Remove this and replace with your login
+    // code if using a login system
+    $timeout(function() {
+      $scope.closeGP();
+    }, 1000);
+  };
+
+	// Info / Komplain
+  $ionicModal.fromTemplateUrl('templates/komplain.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.mdlKP = modal;
+  });
+
+  $scope.sendInfo = function() {
+    $scope.mdlKP.show();
+  };
+
+  $scope.closeKP = function() {
+    $scope.mdlKP.hide();
+  };
+
+  $scope.doSendInfo = function() {
+    console.log('Send info ', $scope.trxData);
+
+    // Simulate a login delay. Remove this and replace with your login
+    // code if using a login system
+    $timeout(function() {
+      $scope.closeKP();
+    }, 1000);
   };
 });

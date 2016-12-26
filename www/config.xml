@@ -48,8 +48,12 @@
     <gap:plugin name="cordova-plugin-admobpro" source="npm" />
     <plugin name="cordova-plugin-splashscreen" source="npm" />
 
-	<preference name="SplashScreen" value="screen" />
-	<preference name="SplashScreenDelay" value="3000" />
+    <plugin name="phonegap-plugin-push" spec="1.5.3" source="npm">
+        <variable name="SENDER_ID" value="597497239727" />
+    </plugin>
+
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="2000" />
 
     <!-- Core plugins -->
 
