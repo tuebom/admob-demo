@@ -20,12 +20,12 @@ angular.module('starter', ['ionic', 'ionic.service.core', 'ionic.service.push', 
 			"onRegister": function(data) {
 				console.log(data.token);
 			}
-    });*/
+    });
  
     push.register(function(token) {
       console.log("My Device token:",token.token);
       push.saveToken(token);  // persist the token in the Ionic Platform
-    });
+    });*/
 		
 		/*if( ionic.Platform.isAndroid() )  { 
 			 admobid = { // for Android
