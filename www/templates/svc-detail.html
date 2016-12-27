@@ -7,9 +7,9 @@
 <ion-view view-title="{{services.name}}">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="opr in services.items" nowrap>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="opr in services.items">
         <img ng-src="{{services.logo}}">
-        <table border="0"><tr><td width="85%"><h2>{{opr.info}}</h2></td>
+        <table width="100%"><tr><td width="85%"><h2>{{opr.info}}</h2></td>
 				<td><button class="button button-small button-balanced button-outline" ng-click="inputNumber('{{opr.kode}}')" style="width: 65px">
 					Beli
 				</button></td></tr></table>
