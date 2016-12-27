@@ -5,13 +5,13 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ionic.service.push', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'ionic.service.core', 'ionic.service.push', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   
 	$ionicPlatform.ready(function() {
 
-    var push = new Ionic.Push({
+    /*var push = new Ionic.Push({
       "debug": false,
 			"onNotification": function(notification) {
 				var payload = notification.payload;
@@ -20,7 +20,7 @@ angular.module('starter', ['ionic', 'ionic.service.push', 'starter.controllers',
 			"onRegister": function(data) {
 				console.log(data.token);
 			}
-    });
+    });*/
  
     push.register(function(token) {
       console.log("My Device token:",token.token);

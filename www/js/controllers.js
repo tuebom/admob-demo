@@ -1,8 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) { //, $ionicPush, $ionicPlatform
+.controller('DashCtrl', function($scope, $ionicPush, $ionicPlatform) { //
 	
-	/*$ionicPlatform.ready(function() {
+	$ionicPlatform.ready(function() {
 		
 		$ionicPush.init({
 			"debug": true,
@@ -16,7 +16,7 @@ angular.module('starter.controllers', [])
 		});
 
 		$ionicPush.register();
-	});*/
+	});
 
 	/*$scope.options = {
 		loop: false,
