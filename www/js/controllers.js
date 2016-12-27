@@ -1,10 +1,10 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $ionicPush, $ionicPlatform) { //
+.controller('DashCtrl', function($scope, $ionicPlatform) { //
 	
 	$ionicPlatform.ready(function() {
 		
-		$ionicPush.init({
+		/*$ionicPush.init({
 			"debug": true,
 			"onNotification": function(notification) {
 				var payload = notification.payload;
@@ -15,7 +15,52 @@ angular.module('starter.controllers', [])
 			}
 		});
 
-		$ionicPush.register();
+		$ionicPush.register();*/
+
+		var push = PushNotification.init({
+				"android": {
+						"senderID": "788426251928"
+				},
+				"ios": {
+						"sound": true,
+						"vibration": true,
+						"badge": true
+				},
+				"windows": {}
+		});
+		console.log('after init');
+
+		push.on('registration', function(data) {
+				console.log('registration event: ' + data.registrationId);
+
+				var oldRegId = localStorage.getItem('registrationId');
+				if (oldRegId !== data.registrationId) {
+						// Save new registration ID
+						localStorage.setItem('registrationId', data.registrationId);
+						// Post registrationId to your app server as the value has changed
+				}
+
+				// var parentElement = document.getElementById('registration');
+				// var listeningElement = parentElement.querySelector('.waiting');
+				// var receivedElement = parentElement.querySelector('.received');
+
+				// listeningElement.setAttribute('style', 'display:none;');
+				// receivedElement.setAttribute('style', 'display:block;');
+		});
+
+		push.on('error', function(e) {
+				console.log("push error = " + e.message);
+		});
+
+		push.on('notification', function(data) {
+				console.log('notification event');
+				navigator.notification.alert(
+						data.message,         // message
+						null,                 // callback
+						data.title,           // title
+						'Ok'                  // buttonName
+				);
+		});
 	});
 
 	/*$scope.options = {
