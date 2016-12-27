@@ -1,22 +1,27 @@
 angular.module('starter.controllers', [])
 
+.controller('RegisterCtrl', function($scope, $state) {
+  
+  $scope.register = function(user) {
+    console.log('Register', user);
+    $state.go('signin');
+  };
+  
+})
+
+.controller('SignInCtrl', function($scope, $state) {
+  
+  $scope.signIn = function(user) {
+    console.log('Sign-In', user);
+    $state.go('tab.dash');
+  };
+  
+})
+
 .controller('DashCtrl', function($scope, $ionicPlatform) { //
 	
 	$ionicPlatform.ready(function() {
 		
-		/*$ionicPush.init({
-			"debug": true,
-			"onNotification": function(notification) {
-				var payload = notification.payload;
-				console.log(notification, payload);
-			},
-			"onRegister": function(data) {
-				console.log(data.token);
-			}
-		});
-
-		$ionicPush.register();*/
-
 		var push = PushNotification.init({
 				"android": {
 						"senderID": "788426251928"
@@ -28,11 +33,11 @@ angular.module('starter.controllers', [])
 				},
 				"windows": {}
 		});
-		console.log('after init');
+		//console.log('after init');
 
 		push.on('registration', function(data) {
 				//console.log('registration event: ' + data.registrationId);
-				alert(data.registrationId);
+				//alert(data.registrationId);
 
 				var oldRegId = localStorage.getItem('registrationId');
 				if (oldRegId !== data.registrationId) {
@@ -40,13 +45,6 @@ angular.module('starter.controllers', [])
 						localStorage.setItem('registrationId', data.registrationId);
 						// Post registrationId to your app server as the value has changed
 				}
-
-				// var parentElement = document.getElementById('registration');
-				// var listeningElement = parentElement.querySelector('.waiting');
-				// var receivedElement = parentElement.querySelector('.received');
-
-				// listeningElement.setAttribute('style', 'display:none;');
-				// receivedElement.setAttribute('style', 'display:block;');
 		});
 
 		push.on('error', function(e) {
@@ -54,12 +52,12 @@ angular.module('starter.controllers', [])
 		});
 
 		push.on('notification', function(data) {
-				console.log('notification event');
+				//console.log('notification event');
 				navigator.notification.alert(
 						data.message,         // message
 						null,                 // callback
 						data.title,           // title
-						'Ok'                  // buttonName
+						'OK'                  // buttonName
 				);
 		});
 	});

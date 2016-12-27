@@ -13,7 +13,6 @@
     -->
 
     <!-- ionic/angularjs js -->
-    <script src="js/zepto.min.js"></script>
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
@@ -41,5 +40,88 @@
       have templates inline in this html file if you'd like).
     -->
     <ion-nav-view></ion-nav-view>
-  </body>
+
+    <script id="templates/register.html" type="text/ng-template">
+      <ion-view view-title="Register">
+        <ion-content>
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">Nama Lengkap</span>
+              <input type="text" ng-model="user.nama">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Kota</span>
+              <input type="text" ng-model="user.kota">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Nomor HP</span>
+              <input type="number" ng-model="user.nohp">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Password</span>
+              <input type="password" ng-model="user.password">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Confirm Password</span>
+              <input type="password" ng-model="user.password2">
+            </label>
+          </div>
+          <div class="padding">
+            <button class="button button-block button-positive" ng-click="register(user)">
+              Register
+            </button>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/sign-in.html" type="text/ng-template">
+      <ion-view view-title="Sign-In">
+				<ion-header-bar>
+					<h1 class="title">Register</h1>
+					<a class="button button-clear text-right" href="#/register">Register</a>
+				</ion-header-bar>
+        <ion-content>
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">User ID</span>
+              <input type="text" ng-model="user.userid">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Password</span>
+              <input type="password" ng-model="user.password">
+            </label>
+          </div>
+          <div class="padding">
+            <button class="button button-block button-positive" ng-click="signIn(user)">
+              Sign-In
+            </button>
+            <p class="text-center">
+              <a href="#/forgot-password">Lupa Password?</a>
+            </p>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+
+    <script id="templates/forgot-password.html" type="text/ng-template">
+      <ion-view view-title="Forgot Password">
+        <ion-content padding="true">
+          <p>
+            Yeah this is just a demo showing how views can be shown without tabs, then you can navigate
+            to views within tabs. Additionally, only one set of tabs needs to be written for all of the different views that should go inside the tabs. (Compared to written the same tab links in the footer of every view that's in a tab.)
+          </p>
+          <p>
+            There's no username/password, just click
+            the Sign-In button back a the sign-in view.
+          </p>
+          <p>
+            Return to <a href="#/sign-in">Sign-In</a>.
+          </p>
+        </ion-content>
+      </ion-view>
+    </script>
+
+	</body>
 </html>

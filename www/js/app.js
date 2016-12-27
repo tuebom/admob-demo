@@ -5,28 +5,12 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']) // 'ionic.service.core', 'ionic.service.push',
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   
 	$ionicPlatform.ready(function() {
-
-    /*var push = new Ionic.Push({
-      "debug": false,
-			"onNotification": function(notification) {
-				var payload = notification.payload;
-				console.log(notification, payload);
-			},
-			"onRegister": function(data) {
-				console.log(data.token);
-			}
-    });
- 
-    push.register(function(token) {
-      console.log("My Device token:",token.token);
-      push.saveToken(token);  // persist the token in the Ionic Platform
-    });*/
-		
+	
 		/*if( ionic.Platform.isAndroid() )  { 
 			 admobid = { // for Android
 					banner: 'ca-app-pub-xxx/xxx' // Change this to your Ad Unit Id for banner...
@@ -60,8 +44,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']) 
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  // setup an abstract state for the tabs directive
-    .state('tab', {
+	.state('register', {
+		url: '/register',
+		templateUrl: 'templates/register.html',
+		controller: 'RegisterCtrl'
+	})
+	.state('signin', {
+		url: '/sign-in',
+		templateUrl: 'templates/sign-in.html',
+		controller: 'SignInCtrl'
+	})
+	.state('forgotpassword', {
+		url: '/forgot-password',
+		templateUrl: 'templates/forgot-password.html'
+	})
+
+		// setup an abstract state for the tabs directive
+  .state('tab', {
     url: "/tab",
     abstract: true,
     templateUrl: "templates/tabs.html"
@@ -109,6 +108,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']) 
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/register');
 
 });

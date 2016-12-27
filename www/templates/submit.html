@@ -8,7 +8,7 @@
   <ion-content>
     <form ng-submit="doProsesTrx()">
       <div class="list">
-        <label class="item item-input">
+        <label id="grpNopel" class="item item-input" ng-show="trxPLN" class="ng-hide">
           <span class="input-label">Nomor Pelanggan</span>
           <input type="number" ng-model="trxData.nopel">
         </label>
