@@ -38,6 +38,11 @@ angular.module('starter.services', [])
     name: 'PLN',
 	info: 'Token listrik',
     logo: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAD4UlEQVR42u2Ye0hTURzHz+4qm4Uz19uBVmiY1iyLyqjoj+ovoyythRk9RHsX9KKi0iDMIsgoMIgitNAMysiKMBHKnhBpf0hYWSKhMvZw6tZ277efc2ze3NqCWxrcC1/OuWfn8eF3fr/fOXcM/8nDZFAZVAaVQf9jUKcz0t01gB6QRpLGk9SkNBbUOLP1kDSgPxyxQS3Ij1NQwTwSOhVBjTN1nPyHoJ+UVHhBBaoLYIMLtAeIz+fckL2wwjhlcO7yT0HNZL1YTmRN/jY3sKBOZwjMFg0cDpV3sVom2nasDuDLvApWa5j0oMAkV9fCwlNISmqAVmtCQvwnVFXp8d06A8ZHkaJt/zw9ATtyS3H5Ui4ePtyIhoaFMBqnoblZh8rKTCTqGhEV9R1ZW+/AbguBtfuoNKAGw1yPscLVVkRHfYVGY/a0fWTJItA+ge9TERMtiNS2uupjx36mFXKkAW1tW+CatKwsB2bTBNcwu02DvPyLWJv+qs+295bnn5zDy5dLcffeDpy/kI/sPeVI2fIa+oNVKLhWgK760YAQijdvlyEj4w7Nt1saULsjHna72rfPPRGbS9D6iPYmUgkpixRJyvk14Z+QBpTnp7i61j5Pwa5dV6HXl2LTllIYu6h9SR9QJUX/4SEQtlJ9HUEvo/dpFP2cN9B4pkT2hnKkkyWvX9/vmtciFegPRxz27S3p52uzWJMfR1T4ddBuNlzUtGjRc1phuzSg7e3JnoknT7FgVeorjJkKFLCzv42aarYJXUwtgn/MMhAWQxux5IurmVOYaIVsaUCtnYlo+jKnv+8p3AAK2uIkDvwBJYQKpffo/EYK6XNaTeT8XEqOS3V7ivEdSAtJZ0jv/ST3+7+4wr6/fDIJ7oR/pSgPOl0LVKFAXKwRVXVr0NiuQ5spllJYDBobZ6K+fg6Kiw9gz9FbeLd+ucgVPj6bjcc16YiPb6f8KSArqwJGQxg6bUekATVbZtGJ9MGzpkYjeOpDhwKjwm0ID+/GsGFiN73LtnlezrE8MJX3N5W7nqh7I10wtVHCD6WJb93cSW8jPFt27EgRUlJqMH9eHRYkv8fKldXIzKxESfFe1Dakoys6otc31SOwOfUeVqTVIPdkIY0d4hpfV7cY+nXl0iV8my0Bzd/i/F80hOFUhvRvH+M+BNJ6LtB+LtEC5dFOiYLJ4S+YAokpe/f3oGIQ3fB9gnJkMLJoCzfYQenI3MYF/CQZUFABZMXoHsjAH3gDCsq3EOyN4L6bJAN1OrV/vu0Vwfc1WyVK+AZzEYwdp0lnglM36cVZGG35AfuaOnLRangq//ckg8qgMqgM+pefn+yTQTosejWgAAAAAElFTkSuQmCC'
+  }, {
+    id: 7,
+    name: 'GAME',
+	info: 'Paket game',
+    logo: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAD4UlEQVR42u2Ye0hTURzHz+4qm4Uz19uBVmiY1iyLyqjoj+ovoyythRk9RHsX9KKi0iDMIsgoMIgitNAMysiKMBHKnhBpf0hYWSKhMvZw6tZ277efc2ze3NqCWxrcC1/OuWfn8eF3fr/fOXcM/8nDZFAZVAaVQf9jUKcz0t01gB6QRpLGk9SkNBbUOLP1kDSgPxyxQS3Ij1NQwTwSOhVBjTN1nPyHoJ+UVHhBBaoLYIMLtAeIz+fckL2wwjhlcO7yT0HNZL1YTmRN/jY3sKBOZwjMFg0cDpV3sVom2nasDuDLvApWa5j0oMAkV9fCwlNISmqAVmtCQvwnVFXp8d06A8ZHkaJt/zw9ATtyS3H5Ui4ePtyIhoaFMBqnoblZh8rKTCTqGhEV9R1ZW+/AbguBtfuoNKAGw1yPscLVVkRHfYVGY/a0fWTJItA+ge9TERMtiNS2uupjx36mFXKkAW1tW+CatKwsB2bTBNcwu02DvPyLWJv+qs+295bnn5zDy5dLcffeDpy/kI/sPeVI2fIa+oNVKLhWgK760YAQijdvlyEj4w7Nt1saULsjHna72rfPPRGbS9D6iPYmUgkpixRJyvk14Z+QBpTnp7i61j5Pwa5dV6HXl2LTllIYu6h9SR9QJUX/4SEQtlJ9HUEvo/dpFP2cN9B4pkT2hnKkkyWvX9/vmtciFegPRxz27S3p52uzWJMfR1T4ddBuNlzUtGjRc1phuzSg7e3JnoknT7FgVeorjJkKFLCzv42aarYJXUwtgn/MMhAWQxux5IurmVOYaIVsaUCtnYlo+jKnv+8p3AAK2uIkDvwBJYQKpffo/EYK6XNaTeT8XEqOS3V7ivEdSAtJZ0jv/ST3+7+4wr6/fDIJ7oR/pSgPOl0LVKFAXKwRVXVr0NiuQ5spllJYDBobZ6K+fg6Kiw9gz9FbeLd+ucgVPj6bjcc16YiPb6f8KSArqwJGQxg6bUekATVbZtGJ9MGzpkYjeOpDhwKjwm0ID+/GsGFiN73LtnlezrE8MJX3N5W7nqh7I10wtVHCD6WJb93cSW8jPFt27EgRUlJqMH9eHRYkv8fKldXIzKxESfFe1Dakoys6otc31SOwOfUeVqTVIPdkIY0d4hpfV7cY+nXl0iV8my0Bzd/i/F80hOFUhvRvH+M+BNJ6LtB+LtEC5dFOiYLJ4S+YAokpe/f3oGIQ3fB9gnJkMLJoCzfYQenI3MYF/CQZUFABZMXoHsjAH3gDCsq3EOyN4L6bJAN1OrV/vu0Vwfc1WyVK+AZzEYwdp0lnglM36cVZGG35AfuaOnLRangq//ckg8qgMqgM+pefn+yTQTosejWgAAAAAElFTkSuQmCC'
   }];
 
   var grup = [{
@@ -261,8 +266,59 @@ angular.module('starter.services', [])
 			kode: 'PLN500H',
 			info: 'PLN 500 ribu'
 		}]
+  }, {
+    id: 7, //GAME
+		items: [{
+			id: 0,
+			kode: 'FIFA, DRAGONICA',
+			info: ''
+		}, {
+			id: 1,
+			kode: 'GARENA',
+			info: ''
+		},{
+			id: 2,
+			kode: 'GAMESCOOL, CABAL',
+			info: ''
+		}, {
+			id: 3,
+			kode: 'LYTO',
+			info: ''
+		}, {
+			id: 4,
+			kode: 'MEGAXUS',
+			info: ''
+		}, {
+			id: 5,
+			kode: 'STEAM INDO (DOTA)',
+			info: ''
+		}, {
+			id: 6,
+			kode: 'WAVEGAME',
+			info: ''
+		}]
   }];
 
+  var item_game = [{
+    id: 0, // FIFA
+		items: [{
+			id: 0,
+			kode: 'FIF10',
+			info: 'Axis 5 ribu'
+		}, {
+			id: 1,
+			kode: 'FIF20',
+			info: 'Axis 10 ribu'
+		},{
+			id: 2,
+			kode: 'FIF50',
+			info: 'Axis 15 ribu'
+		}, {
+			id: 3,
+			kode: 'FIF100',
+			info: 'Axis 25 ribu'
+		}]
+  }];
 
   return {
     all: function() {

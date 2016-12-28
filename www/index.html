@@ -46,25 +46,42 @@
         <ion-content>
           <div class="list">
             <label class="item item-input">
-              <span class="input-label">Nama Lengkap</span>
-              <input type="text" ng-model="user.nama">
+              <span class="input-label">Nama</span>
+              <input type="text" ng-model="user.nama" style="text-transform: uppercase">
             </label>
             <label class="item item-input">
               <span class="input-label">Kota</span>
-              <input type="text" ng-model="user.kota">
+              <!--<input type="text" ng-model="user.kota">-->
+							<select ng-model="user.kota">
+								<option></option>
+								<option>BADUNG</option>
+								<option>DENPASAR</option>
+								<option>GIANYAR</option>
+								<option>KARANGASEM</option>
+								<option>KLUNGKUNG</option>
+								<option>NEGARA</option>
+								<option>SINGARAJA</option>
+								<option>TABANAN</option>
+								<option>LOMBOK</option>
+								<option>SURABAYA</option>
+								<option>JAKARTA</option>
+								<option>MEDAN</option>
+								<option>KALIMANTAN</option>
+								<option>SULAWESI</option>
+							</select>
             </label>
             <label class="item item-input">
               <span class="input-label">Nomor HP</span>
               <input type="number" ng-model="user.nohp">
             </label>
-            <label class="item item-input">
+            <!--<label class="item item-input">
               <span class="input-label">Password</span>
               <input type="password" ng-model="user.password">
             </label>
             <label class="item item-input">
               <span class="input-label">Confirm Password</span>
               <input type="password" ng-model="user.password2">
-            </label>
+            </label>-->
           </div>
           <div class="padding">
             <button class="button button-block button-positive" ng-click="register(user)">

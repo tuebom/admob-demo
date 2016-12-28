@@ -6,17 +6,17 @@ navigation history that also transitions its views in and out.
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
   <!-- Dashboard Tab -->
-  <ion-tab title="Dashboard" icon-off="ion-ios-pie-outline" icon-on="ion-ios-pie" href="#/tab/dash">
+  <ion-tab title="Dashboard" icon-off="ion-ios-pie-outline" icon-on="ion-ios-pie" href="#/tab/dash" on-deselect="clearHistory()">
     <ion-nav-view name="tab-dash"></ion-nav-view>
   </ion-tab>
 
   <!-- Services Tab -->
-  <ion-tab title="Produk" icon-off="ion-ios-cart-outline" icon-on="ion-ios-cart" href="#/tab/services">
+  <ion-tab title="Produk" icon-off="ion-ios-cart-outline" icon-on="ion-ios-cart" href="#/tab/services" on-deselect="clearHistory()">
     <ion-nav-view name="tab-services"></ion-nav-view>
   </ion-tab>
 
   <!-- Tool Tab -->
-  <ion-tab title="Tool" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/tool">
+  <ion-tab title="Tool" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/tool" on-deselect="clearHistory()">
     <ion-nav-view name="tab-tool"></ion-nav-view>
   </ion-tab>
 

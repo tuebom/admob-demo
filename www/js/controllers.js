@@ -1,10 +1,11 @@
 angular.module('starter.controllers', [])
 
-.controller('RegisterCtrl', function($scope, $state) {
+.controller('RegisterCtrl', function($scope, $state, $ionicHistory) {
   
   $scope.register = function(user) {
     console.log('Register', user);
     $state.go('signin');
+		$ionicHistory.clearHistory();
   };
   
 })
@@ -14,11 +15,12 @@ angular.module('starter.controllers', [])
   $scope.signIn = function(user) {
     console.log('Sign-In', user);
     $state.go('tab.dash');
+		$ionicHistory.clearHistory();
   };
   
 })
 
-.controller('DashCtrl', function($scope, $ionicPlatform) { //
+.controller('DashCtrl', function($scope, $ionicPlatform, $ionicHistory) {
 	
 	$ionicPlatform.ready(function() {
 		
@@ -82,9 +84,13 @@ angular.module('starter.controllers', [])
 		$scope.activeIndex = data.slider.activeIndex;
 		$scope.previousIndex = data.slider.previousIndex;
 	});*/
+
+	$scope.clearHistory = function() {
+      $ionicHistory.clearHistory();
+	}
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
+.controller('ChatsCtrl', function($scope, $ionicHistory, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -97,6 +103,10 @@ angular.module('starter.controllers', [])
   $scope.remove = function(opr) {
     Chats.remove(opr);
   }
+
+	$scope.clearHistory = function() {
+      $ionicHistory.clearHistory();
+	}
 })
 
 .controller('SvcDetailCtrl', function($scope, $ionicModal, $timeout, $stateParams, Chats) {
@@ -104,6 +114,9 @@ angular.module('starter.controllers', [])
 
   // Form data for the submit modal
   $scope.trxData = {};
+	$scope.trxPLN = false;
+
+	if ($stateParams.svcId) $scope.trxPLN = true;
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/submit.html', {
@@ -135,7 +148,11 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('ToolCtrl', function($scope, $ionicModal, $timeout) {
+.controller('ToolCtrl', function($scope, $ionicModal, $timeout, $ionicHistory) {
+
+	$scope.clearHistory = function() {
+      $ionicHistory.clearHistory();
+	}
 
   // Form data for the submit modal
   $scope.trxData = {};

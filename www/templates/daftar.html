@@ -9,12 +9,29 @@
     <form ng-submit="doRegister()">
       <div class="list">
         <label class="item item-input">
-          <span class="input-label">Nama Member</span>
-          <input type="text" ng-model="trxData.nama">
+          <span class="input-label">Nama</span>
+          <input type="text" ng-model="trxData.nama" style="text-transform: uppercase">
         </label>
         <label class="item item-input">
           <span class="input-label">Kota</span>
-          <input type="text" ng-model="trxData.kota">
+          <!--<input type="text" ng-model="trxData.kota">-->
+					<select ng-model="trxData.kota">
+						<option></option>
+						<option>BADUNG</option>
+						<option>DENPASAR</option>
+						<option>GIANYAR</option>
+						<option>KARANGASEM</option>
+						<option>KLUNGKUNG</option>
+						<option>NEGARA</option>
+						<option>SINGARAJA</option>
+						<option>TABANAN</option>
+						<option>LOMBOK</option>
+						<option>SURABAYA</option>
+						<option>JAKARTA</option>
+						<option>MEDAN</option>
+						<option>KALIMANTAN</option>
+						<option>SULAWESI</option>
+					</select>
         </label>
         <label class="item item-input">
           <span class="input-label">Nomor HP</span>
