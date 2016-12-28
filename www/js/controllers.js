@@ -5,6 +5,7 @@ angular.module('starter.controllers', [])
   $scope.register = function(user) {
     console.log('Register', user);
     $state.go('signin');
+		$ionicHistory.clearCache();
 		$ionicHistory.clearHistory();
   };
   
@@ -15,6 +16,7 @@ angular.module('starter.controllers', [])
   $scope.signIn = function(user) {
     console.log('Sign-In', user);
     $state.go('tab.dash');
+		$ionicHistory.clearCache();
 		$ionicHistory.clearHistory();
   };
   
@@ -86,7 +88,8 @@ angular.module('starter.controllers', [])
 	});*/
 
 	$scope.clearHistory = function() {
-      $ionicHistory.clearHistory();
+		$ionicHistory.clearCache();
+    $ionicHistory.clearHistory();
 	}
 })
 
@@ -105,7 +108,8 @@ angular.module('starter.controllers', [])
   }
 
 	$scope.clearHistory = function() {
-      $ionicHistory.clearHistory();
+		$ionicHistory.clearCache();
+    $ionicHistory.clearHistory();
 	}
 })
 
@@ -151,7 +155,8 @@ angular.module('starter.controllers', [])
 .controller('ToolCtrl', function($scope, $ionicModal, $timeout, $ionicHistory) {
 
 	$scope.clearHistory = function() {
-      $ionicHistory.clearHistory();
+		$ionicHistory.clearCache();
+    $ionicHistory.clearHistory();
 	}
 
   // Form data for the submit modal
@@ -282,4 +287,8 @@ angular.module('starter.controllers', [])
       $scope.closeKP();
     }, 1000);
   };
+})
+
+.controller('SvcCekHrgCtrl', function($scope, $ionicHistory) {
+
 });

@@ -79,24 +79,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   .state('tab.chats', {
-      url: '/services',
-      views: {
-        'tab-services': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.svc-detail', {
-      url: '/services/:svcId',
-      views: {
-        'tab-services': {
-          templateUrl: 'templates/svc-detail.html',
-          controller: 'SvcDetailCtrl'
-        }
-      }
-    })
-
+		url: '/services',
+		views: {
+			'tab-services': {
+				templateUrl: 'templates/tab-chats.html',
+				controller: 'ChatsCtrl'
+			}
+		}
+	})
+	.state('tab.svc-detail', {
+		url: '/services/:svcId',
+		views: {
+			'tab-services': {
+				templateUrl: 'templates/svc-detail.html',
+				controller: 'SvcDetailCtrl'
+			}
+		}
+	})
   .state('tab.tool', {
     url: '/tool',
     views: {
@@ -105,6 +104,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'ToolCtrl'
       }
     }
+	})
+	.state('tab.tool-ch', {
+		url: '/tool/cekHarga',
+		views: {
+			'tab-tool': {
+				templateUrl: 'templates/tab-chrg.html',
+				controller: 'SvcCekHrgCtrl'
+			}
+		}
   });
 
   // if none of the above states are matched, use this as the fallback
