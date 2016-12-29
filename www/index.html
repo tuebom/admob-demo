@@ -19,7 +19,6 @@
     <script src="cordova.js"></script>
 
     <!--<script src="js/admob.js"></script>-->
-    <script src="js/fastclick.min.js"></script>
       
     <!-- your app's js -->
     <script src="js/app.js"></script>
@@ -51,24 +50,7 @@
             </label>
             <label class="item item-input">
               <span class="input-label">Kota</span>
-              <input type="text" ng-model="user.kota">
-							<!--<select ng-model="user.kota">
-								<option></option>
-								<option>BADUNG</option>
-								<option>DENPASAR</option>
-								<option>GIANYAR</option>
-								<option>KARANGASEM</option>
-								<option>KLUNGKUNG</option>
-								<option>NEGARA</option>
-								<option>SINGARAJA</option>
-								<option>TABANAN</option>
-								<option>LOMBOK</option>
-								<option>SURABAYA</option>
-								<option>JAKARTA</option>
-								<option>MEDAN</option>
-								<option>KALIMANTAN</option>
-								<option>SULAWESI</option>
-							</select>-->
+              <input type="text" ng-model="user.kota" style="text-transform: uppercase">
             </label>
             <label class="item item-input">
               <span class="input-label">Nomor HP</span>
@@ -101,41 +83,23 @@
         <ion-content>
           <div class="list">
             <label class="item item-input">
-              <span class="input-label">User ID</span>
-              <input type="text" ng-model="user.userid">
+              <span class="input-label">ID Member</span>
+              <input type="text" ng-model="user.mbrid">
             </label>
             <label class="item item-input">
-              <span class="input-label">Password</span>
-              <input type="password" ng-model="user.password">
+              <span class="input-label">Nomor HP</span>
+              <input type="number" ng-model="nohp">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Nomor PIN</span>
+              <input type="password" ng-model="user.pin">
             </label>
           </div>
           <div class="padding">
             <button class="button button-block button-positive" ng-click="signIn(user)">
               Sign-In
             </button>
-            <p class="text-center">
-              <a href="#/forgot-password">Lupa Password?</a>
-            </p>
           </div>
-        </ion-content>
-      </ion-view>
-    </script>
-
-
-    <script id="templates/forgot-password.html" type="text/ng-template">
-      <ion-view view-title="Forgot Password">
-        <ion-content padding="true">
-          <p>
-            Yeah this is just a demo showing how views can be shown without tabs, then you can navigate
-            to views within tabs. Additionally, only one set of tabs needs to be written for all of the different views that should go inside the tabs. (Compared to written the same tab links in the footer of every view that's in a tab.)
-          </p>
-          <p>
-            There's no username/password, just click
-            the Sign-In button back a the sign-in view.
-          </p>
-          <p>
-            Return to <a href="#/sign-in">Sign-In</a>.
-          </p>
         </ion-content>
       </ion-view>
     </script>

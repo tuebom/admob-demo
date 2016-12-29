@@ -4,20 +4,24 @@ angular.module('starter.controllers', [])
   
   $scope.register = function(user) {
     console.log('Register', user);
-    $state.go('signin');
-		$ionicHistory.clearCache();
-		$ionicHistory.clearHistory();
+    // $ionicHistory.nextViewOptions({
+			// disableBack: true
+		// });
+		$ionicHistory.currentView($ionicHistory.backView());
+		$state.go('signin', {nohp: user.nohp}, {location: 'replace'});
   };
   
 })
 
-.controller('SignInCtrl', function($scope, $state) {
+.controller('SignInCtrl', function($scope, $state, $ionicHistory) {
   
   $scope.signIn = function(user) {
     console.log('Sign-In', user);
-    $state.go('tab.dash');
-		$ionicHistory.clearCache();
-		$ionicHistory.clearHistory();
+    // $ionicHistory.nextViewOptions({
+			// disableBack: true
+		// });
+		$ionicHistory.currentView($ionicHistory.backView());
+    $state.go('tab.dash', {}, {location: 'replace'});
   };
   
 })
@@ -88,7 +92,7 @@ angular.module('starter.controllers', [])
 	});*/
 
 	$scope.clearHistory = function() {
-		$ionicHistory.clearCache();
+		//$ionicHistory.clearCache();
     $ionicHistory.clearHistory();
 	}
 })
@@ -108,7 +112,7 @@ angular.module('starter.controllers', [])
   }
 
 	$scope.clearHistory = function() {
-		$ionicHistory.clearCache();
+		//$ionicHistory.clearCache();
     $ionicHistory.clearHistory();
 	}
 })
@@ -155,7 +159,7 @@ angular.module('starter.controllers', [])
 .controller('ToolCtrl', function($scope, $ionicModal, $timeout, $ionicHistory) {
 
 	$scope.clearHistory = function() {
-		$ionicHistory.clearCache();
+		//$ionicHistory.clearCache();
     $ionicHistory.clearHistory();
 	}
 
