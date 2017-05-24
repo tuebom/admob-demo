@@ -11,9 +11,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   
 	$ionicPlatform.ready(function() {
 	
-		/*if( ionic.Platform.isAndroid() )  { 
+		if( ionic.Platform.isAndroid() )  { 
 			 admobid = { // for Android
-					banner: 'ca-app-pub-xxx/xxx' // Change this to your Ad Unit Id for banner...
+					banner: 'ca-app-pub-8720755312345684/8407291456' // Change this to your Ad Unit Id for banner...
 			 };
 
 			 if(AdMob) 
@@ -22,7 +22,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 						 position:AdMob.AD_POSITION.BOTTOM_CENTER, 
 						 autoShow:true
 					} );
-		}*/
+		}
 
 		// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
